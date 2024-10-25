@@ -1,0 +1,38 @@
+{
+  "expo": {
+    "name": "app-ui",
+    "slug": "app-ui",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "dependencies": {
+      "expo-sqlite": "^14.0.6"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "9e8c11b6-c459-411a-a34c-489c528195b5"
+      }
+    }
+  }
+}
