@@ -44,13 +44,14 @@ export default function HomeScreen({ route, navigation }) {
     setLocations([]);
     fetchWeatherForecast({
       cityName: loc.name,
-      days: '7'
+      days: '10'
     }).then(data=>{
       setLoading(false);
       setWeather(data);
       storeData('city',loc.name);
     })
   }
+
 
   // Initiale Wetterdaten laden oder wenn eine Stadt aus dem BookmarkScreen ausgewählt wurde
   useEffect(()=>{
@@ -112,7 +113,7 @@ export default function HomeScreen({ route, navigation }) {
 
     fetchWeatherForecast({
       cityName,
-      days: '7'
+      days: '3'
     }).then(data=>{
       setWeather(data);
       setLoading(false);
@@ -304,11 +305,11 @@ export default function HomeScreen({ route, navigation }) {
                       return (
                         <View 
                           key={index} 
-                          className="flex justify-center items-center w-24 rounded-3xl py-3 space-y-1 mr-4" 
+                          className="flex justify-center items-center w-28 rounded-3xl py-3 space-y-1 mr-6" 
                           style={{backgroundColor: theme.bgWhite(0.15)}}
                         >
                           <Image 
-                            source={weatherImages[item?.day?.condition?.text || 'other']}
+                            source={weatherImages[item?.day?.condition?.text.trim() || 'other']}
                               className="w-11 h-11" 
                           />
                           <Text className="text-white">{dayName}</Text>
