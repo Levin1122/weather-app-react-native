@@ -1,4 +1,4 @@
-export const apiKey = '36f23a3e9c4e41b19ca84906241211';
+export const apiKey = 'DEIN-API-KEY';
 
 export const weatherImages = {
     'Partly cloudy': require('../assets/images/partlycloudy.png'),
